@@ -11,52 +11,71 @@
 
     <script>
 
-        // Object
+        //object - entity - stores data as a collection of properties in key value pair format
+
         const person = {
             name: "Raj",
-            age: 21,
+            age: 22,
             gender: "Male"
-        };
+        }
 
-        document.write("Name : ", person.name, "<br>");
-        document.write("Age : ", person.age, "<br>");
-        document.write("Gender : ", person.gender, "<br><br>");
+        document.write("Name: ", person.name, "<br>")
+        document.write("Age: ", person.age, "<br>")
+        document.write("Gender: ", person.gender, "<br><br>")
 
-        // Template Literals
-        document.write(`
-        Name : ${person.name} <br>
-        Age : ${person.age} <br>
-        Gender : ${person.gender} <br><br>
-    `);
+        //template literals: used to avoid printing everything separately
+        // (``) - syntax
 
-        // JSON-like Data
+        const person1 = {
+                name: "Rani",
+                age: 21,
+                gender: "Female"
+            }
+        const person2 = {
+            name: "John",
+            age: 23,
+            gender: "Male"
+        }
+        const person3 = {
+            name: "jin",
+            age: 24,
+            gender: "Female"
+        }
+
+        document.write(`Name: ${person1.name} <br> Age: ${person1.age} <br> Gender: ${person1.gender} <br><br>`)
+        document.write(`Name: ${person2.name} <br> Age: ${person2.age} <br> Gender: ${person2.gender} <br><br>`)
+        document.write(`Name: ${person3.name} <br> Age: ${person3.age} <br> Gender: ${person3.gender} <br><br>`)
+
+
+        //JSON - Javascript object notation
+        //obj stored in array format
+        
         const data = [
             {
-                name: "Maherin",
-                age: 22
+                name: "Rani",
+                age: 21,
+                gender: "Female"
             },
             {
-                name: "Sakshi",
-                age: 23
+                name: "John",
+                age: 23,
+                gender: "Male"
             },
             {
-                name: "Bhushan",
-                age: 21
-            },
-            {
-                name: "Soheb",
-                age: 21
+                name: "jin",
+                age: 24,
+                gender: "Female"
             }
-        ];
 
-        // Map Function
-        data.map((item, index) => {
-            document.write(`
-            Name : ${item.name} <br>
-            Age : ${item.age} <br><br>
-        `);
-        });
+        ]
 
+        //map function = acts as a loop()
+        //avoids using unnecessary memory
+
+       data.map((item,index) => {
+        document.write(`Name: ${item.name} <br> Age: ${item.age} <br> Gender: ${item.gender} <br><br>`);
+
+       });
     </script>
 
 </body>
