@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Literals & JSON</title>
+</head>
+
+<body>
+
+    <script>
+
+        // Object
+        const person = {
+            name: "Raj",
+            age: 21,
+            gender: "Male"
+        };
+
+        document.write("Name : ", person.name, "<br>");
+        document.write("Age : ", person.age, "<br>");
+        document.write("Gender : ", person.gender, "<br><br>");
+
+        // Template Literals
+        document.write(`
+        Name : ${person.name} <br>
+        Age : ${person.age} <br>
+        Gender : ${person.gender} <br><br>
+    `);
+
+        // JSON-like Data
+        const data = [
+            {
+                name: "Maherin",
+                age: 22
+            },
+            {
+                name: "Sakshi",
+                age: 23
+            },
+            {
+                name: "Bhushan",
+                age: 21
+            },
+            {
+                name: "Soheb",
+                age: 21
+            }
+        ];
+
+        // Map Function
+        data.map((item, index) => {
+            document.write(`
+            Name : ${item.name} <br>
+            Age : ${item.age} <br><br>
+        `);
+        });
+
+    </script>
+
+</body>
+
+</html>
