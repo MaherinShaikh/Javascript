@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class List</title>
+
+    <style>
+        .box{
+            height: 300px;
+            width: 300px;
+            background-color: aquamarine;
+            margin-bottom: 20px;
+        }
+
+        .bg-change{
+            background-color: blueviolet;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Class List Methods</h1>
+    <div class="box"></div>
+    <button class="add">Add</button>
+    <button class="remove">Remove</button>
+    <button class="toggle">Toggle</button>
+
+    <script>
+        /*
+
+        There are 3 types of classlist methods
+            1.add()
+            2.remove()
+            3.toggle()
+        
+        */
+
+        const box = document.querySelector('.box')
+       const add = document.querySelector('.add')
+       const remove = document.querySelector('.remove')
+       const toggle = document.querySelector('.toggle')
+
+        add.onclick = () => {
+            box.classList.add('bg-change')        
+        } 
+
+        remove.onclick = () => {
+            box.classList.remove('bg-change')
+        } 
+
+        toggle.onclick = () => {
+            box.classList.toggle('bg-change')
+        } 
+       
+
+    </script>
+</body>
+</html>
