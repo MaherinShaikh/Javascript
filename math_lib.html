@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Library</title>
+</head>
+<body>
+    <script>
+        document.write("Square root : ", Math.sqrt(144), "<br>")
+        document.write("Cube root : ", Math.cbrt(27), "<br>")
+        document.write("Power : ", Math.pow(2, 5), "<br>")
+        document.write("Max : ", Math.max(2, 5, 6, 7, 8, 9, 1), "<br>")
+        document.write("Min : ", Math.min(2, 5, 6, 7, 8, 9, 1), "<br>")
+        document.write("Round : ", Math.round(3.50), "<br>")
+        document.write("Ceil : ", Math.ceil(3.01), "<br>")          
+        document.write("Floor : ", Math.floor(3.99), "<br>")
+        document.write("PI : ", Math.PI, "<br>")
+        document.write("Random : ", Math.random(), "<br>") // 0-1
+        document.write("Random : ", Math.floor(Math.random() * 100), "<br>") // 0-100
+
+        //OTP generation
+        const data = [9472, 8232, 8342, 9374, 7465, 4853, 2938, 4756, 2742, 7465, 2763, 4756]
+
+        document.write("OTP : ", data[Math.floor(Math.random() * data.length)], "<br>")
+
+        //random 4 digit otp generation
+        let otp = "";
+        for (let i = 1; i <= 4; i++) {
+            otp = otp + Math.floor(Math.random() * 10)
+        }
+        document.write("Random OTP : ", otp, "<br>")
+
+
+        //Captcha generation
+        const data1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+        let s = "";
+
+        for (let i = 1; i <= 6; i++) {
+            s = s + data1[Math.floor(Math.random() * data1.length)]
+        }
+
+        document.write("CAPTCHA : ", s)
+    </script>
+</body>
+</html>
