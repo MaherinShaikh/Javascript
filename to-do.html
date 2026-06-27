@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            background-color: beige;
+            height: 300px;
+            width: 350px;
+            border-radius: 8px;
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">    
+        <h1>To-do Lists</h1>
+        <input type="text" placeholder="Add Your Tasks">
+        <button>Add</button>
+        <ol></ol>
+    </div>
+
+    <script>
+
+        const input = document.querySelector('input')
+        const btn = document.querySelector('button')
+        const ol = document.querySelector('ol')
+
+        btn.addEventListener('click', () => {
+            const li = document.createElement('li')
+            const delBtn = document.createElement('button')
+
+            li.textContent = input.value
+            delBtn.textContent = "Delete"
+
+            ol.appendChild(li)
+            li.appendChild(delBtn)
+
+            delBtn.addEventListener('click', () => {
+                ol.removeChild(li)
+            })
+
+            input.value = ""
+            input.focus()
+        })
+
+
+    </script>
+</body>
+</html>
