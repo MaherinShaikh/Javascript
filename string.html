@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String methods</title>
+</head>
+<body>
+        <script>
+            /*
+                - String :  
+                    - It is a collection of character which is represent a text.
+                    - character == alphabets : 'a'
+                    - string == words : "hello"
+                    - 0 based index
+            */
+
+        let a = "India is the Best Country"
+
+        document.write("String is: ", a, "<br>");
+        document.write("UpperCase: ", a.toUpperCase(), "<br>")
+        document.write("lower case: ", a.toLowerCase(), "<br>")
+        document.write("index of: ", a.indexOf('t'), "<br>")
+        document.write("Last index of: ", a.lastIndexOf('t'), "<br>")
+        document.write("substring: ", a.substring(0,5), "<br>")
+        document.write("Substring : ", a.substring(5), "<br>")
+        document.write("Char At : ", a.charAt(1), "<br>")
+        document.write("Replace : ", a.replace("India", "Japan"), "<br>")
+        document.write("Replace All : ", a.replaceAll("i", "I"), "<br>")
+        document.write("split: ", a.split(""), "<br>") //splits individual alphabets
+        document.write("split: ", a.split(" "), "<br>") //splits words
+        document.write("Split : ", a.split(" ").reverse().join("-"), "<br>") //string reverse
+        </script>
+</body>
+</html>
