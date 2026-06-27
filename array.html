@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+<body>
+    <script>
+        let a = [1, 2, 3, 4, 5];
+        document.write("Array Elements: ", a, "<br>");
+
+        //Push method - add the elements in the array
+        a.push(6,7,8,9,10)
+        document.write("Push Method: ", a, "<br>") 
+
+        //Pop method - removes 1 element from the end of the array
+        a.pop()
+        document.write("Pop Method: ", a, "<br>")  
+
+        //Shift method - removes an element from the start of an array
+        a.shift()
+        document.write("Shift method: ", a, "<br>")
+
+        //Unshift method - used to add an element at the starting index of array
+        a.unshift(1)
+        document.write("UnShift method: ", a, "<br>")
+
+        //Slice method - cut an element
+        let b = a.slice(1,4)
+        document.write("Slice method: ", b, "<br>")
+
+        //Splice method - cut an element and update
+        a.splice(1,3, 20, 30, 40)
+        document.write("Splice method: ", a, "<br>")
+
+        //Join method - merge elements of an array into a string
+        let c = a.join("-")
+        document.write("Join method: ", c, "<br>")
+
+        //Sort method - sort the elements of an array asec-desc
+        let d = ['b', 'a', 'c', 'e', 'd']
+        d.sort()
+        document.write("Sort method: ", d, "<br>")
+
+    </script>
+</body>
+</html>
