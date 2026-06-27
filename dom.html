@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+
+    <h1>DOM</h1>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtkgAqDn392ShKllNug9vsFO69LuULfOoL0w&s" alt="" class="src"><br>
+    <button class="btn1">Change img</button>
+    <button class="btn2">Undo</button>
+
+    <script>
+      /*
+        - DOM : Document Object Model
+        - Page Dynamic
+        - Interactive
+        - 4 pillars of DOM
+            1. Selection of an element
+                - document.getElementById('h1') : Id
+                - document.getElementByClassName('head') : class
+                - document.getElementByTagName('h1') : tag
+                - document.querySelector('h1') : Id, class, tag
+                - document.querySelectorAll('h1') : class, tag
+  
+            2. Changing HTML
+                - innerHTML, TextContent
+  
+            3. Changing CSS
+                - selector.style.property = value
+
+            4. Event Handling
+                - click, dblclick, mouseover, onclick
+        */
+
+        const h1 = document.querySelector('h1')
+        const img = document.querySelector('img')
+        const btn1 = document.querySelector('.btn1')
+        const btn2 = document.querySelector('.btn2')
+
+        h1.innerHTML = "Document Object Model"
+        h1.style.color = "red"
+        h1.style.backgroundColor = "black"
+        h1.style.padding = "20px"
+        h1.style.textAlign = "left"
+
+        h1.addEventListener('click', function(){
+            h1.innerHTML = "Document Object Model"
+            h1.style.color = "white"
+            h1.style.backgroundColor = "skyblue"
+            h1.style.padding = "20px"
+            h1.style.textAlign = "center"
+        })
+
+        h1.addEventListener('dblclick', function () {      
+            h1.innerHTML = "Document Object Model"
+            h1.style.color = "white"
+            h1.style.backgroundColor = "pink"
+            h1.style.padding = "20px"
+            h1.style.textAlign = "right"
+        })
+
+        btn1.addEventListener('click', function(){
+            img.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpeGm4Ani82TF3qwSORxnuLisSimg3rTQRI-NwEXHo7EM9VsW53UNZmBU&s=10"
+        })
+
+        btn2.addEventListener('click', function(){
+            img.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtkgAqDn392ShKllNug9vsFO69LuULfOoL0w&s"
+        })
+    </script>
+</body>
+</html>
