@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api</title>
+</head>
+<body>
+
+    <ul></ul>
+    
+    <script>
+
+        /*
+        API- Application Programming Interface
+        - Data Fetching :
+            - There are two types of data fetching method
+            1. Axios : GET, POST, PUT, PATCH, DELETE, JSON
+            2. Fetch : GET, Json conversion   
+        */
+
+
+        //linked the api and assigned a name
+        const api = "https://jsonplaceholder.typicode.com/users"
+
+        //creating function
+        const getData = async() => {
+            try {
+                const data = await fetch(api)
+                const finalData = await data.json()
+                console.log(finalData)
+                createList(finalData)
+
+            } catch (error) {
+                console.log(error);
+                
+            }
+        }
+
+        const createList = (users) => {
+            const ul = document.querySelector('ul')
+            users.map((item) => {
+                const li = document.createElement('li')
+
+            li.textContent = item.address.city
+            ul.appendChild(li)
+            })
+        }
+
+        getData()
+
+    </script>
+</body>
+</html>
